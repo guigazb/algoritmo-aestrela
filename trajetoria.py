@@ -105,7 +105,7 @@ else:
     caminho = a_star(start, goal)
 
     # Mostrar o mapa com o caminho encontrado
-    plt.figure(figsize=(8, 8))  # se der merda volta pra 8,8
+    plt.figure(figsize=(8, 8))  
     plt.imshow(mapa, cmap='gray')
 
     # Destacar o caminho encontrado
