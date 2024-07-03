@@ -3,6 +3,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 # Definição do mapa de exemplo (matriz binária)
+
 mapa = np.array([
     [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
     [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
@@ -61,7 +62,7 @@ def pos_valida(pos):
 
 
 # Implementação do algoritmo A* usando a ED heap
-def a_star(start, goal):
+def A_estrela(start, goal):
     heap = []
     heapq.heappush(heap, (0, start))
     came_from = {start: None}
@@ -100,9 +101,10 @@ def a_star(start, goal):
 if pos_valida(start) == False or pos_valida(goal) == False:
     print(f'posição inválida ! ')
 else:
+    
     # Executar o algoritmo A* para encontrar o caminho
 
-    caminho = a_star(start, goal)
+    caminho = A_estrela(start, goal)
 
     # Mostrar o mapa com o caminho encontrado
     plt.figure(figsize=(8, 8))  
